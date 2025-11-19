@@ -114,3 +114,55 @@ On Day 3 i worked with Git, focusing on commits, bisecting, merging, and conflic
 - **Graph of Branches After Merging**  
   ![graph of the branches after merging the demo branch into main branch](./day3/image-5.png)
 
+## Day 4
+
+On day 4 i focused on network requests, DNS lookups, and building a Node HTTP server with caching and headers manipulation.
+
+### What i did
+
+1. **DNS Lookup and Traceroute**  
+   - Performed `nslookup dummyjson.com` and `traceroute dummyjson.com`.
+
+2. **Using CURL**  
+   - Sent a GET request to fetch products from the dummy JSON API:  
+     ```bash
+     curl -v https://dummyjson.com/products?limit=5&skip=10
+     ```
+
+3. **Modifying Headers**  
+   - Removed the **User-Agent** header and sent a **fake Authorization** header.  
+   - Captured and compared the differences in the responses.
+
+4. **Observe Caching**  
+   - Extracted the **ETag** from the response and re-sent the request with `If-None-Match`.  
+   - Verified a `304 (Not Modified)` response.
+
+5. **Built a Node HTTP Server**  
+   - Created endpoints:
+     - `/echo`  returns request headers  
+     - `/slow?ms=3000`  delays response by query parameter `ms`  
+     - `/cache`  returns cache-related headers
+
+### Screenshots
+
+
+- **Request Sent to dummyjson.com Without Any Modification**  
+  <img src="./day4/image.png" width="600">
+
+- **Request Sent to dummyjson After Removing the User-Agent**  
+  <img src="./day4/image-1.png" width="600">
+
+- **Request Sent to dummyjson with Fake Authorization Token**  
+  <img src="./day4/image-2.png" width="600">
+
+- **Comparison of Results from Fake Auth Token vs. Request Without User-Agent**  
+  <img src="./day4/image-3.png" width="600">
+
+- **Sent the ETag to Check Caching and Got 304 Response**  
+  <img src="./day4/image-4.png" width="600">
+
+- **Node Server /echo Route**  
+  <img src="./day4/image-5.png" width="600">
+
+- **Node Server /slow Route Working as Expected**  
+  <img src="./day4/image-6.png" width="600">
