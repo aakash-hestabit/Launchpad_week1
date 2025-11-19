@@ -46,3 +46,33 @@ Created `introspect.js` to output:
 
 - ***Switching Node Versions***  
   ![Switching Node versions](./day1/image-3.png)
+
+## Day 2
+
+On day 2 i built a word-stats CLI tool and tested its performance with concurrency.
+
+### Tasks
+
+1. **Create a Big Corpus File**  
+   - Generated a text file containing more than 200,000 words.
+
+2. **Build CLI Command**  
+   Used the following command to analyze word statistics:  
+   `node wordstat.js --file corpus.txt --top 10 --minLen 5 --unique`
+
+3. **CLI Output Includes**  
+   - Total words  
+   - Unique words  
+   - Longest word  
+   - Shortest word  
+   - Top N repeated words  
+
+4. **Add Concurrency**  
+   - Split the input file into chunks  
+   - Processed chunks in parallel using `Promise.all` or `worker_threads`
+
+5. **Benchmarking**  
+   - Tested concurrency levels: **1, 4, 8**  
+   - Logged execution time for comparison
+
+  
