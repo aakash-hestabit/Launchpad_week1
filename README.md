@@ -195,3 +195,9 @@ On day 4 i focused on network requests, DNS lookups, and building a Node HTTP se
 - **Husky Pre-commit Hook Failure**  
   When the pre-commit hook ran and failed due to the missing `config.json` file, it was logged and rejected:  
   ![husky pre-commit file ran and failed as there was no config.json file present, same can be verified through the logs](image.png)
+  
+  Again when the linter ran after the validation was complete there was an unused variable so it prevented the commit 
+  ![alt text](image-2.png)
+
+
+  ![the prettier formatted all the files added before commiting  ](image-1.png)
