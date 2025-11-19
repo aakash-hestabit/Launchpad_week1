@@ -166,3 +166,32 @@ On day 4 i focused on network requests, DNS lookups, and building a Node HTTP se
 
 - **Node Server /slow Route Working as Expected**  
   <img src="./day4/image-6.png" width="600">
+
+# Day 5
+
+### Learnings:
+
+1. **Create `validate.sh` script**:
+   - Ensured the `src/` directory exists.
+   - Validated `config.json` for correctness.
+   - Appended logs with timestamps.
+
+2. **Add ESLint + Prettier**:
+   - Set up to block commits with bad formatting.
+
+3. **Add Pre-commit hook using Husky**:
+   - Ran linting and validation scripts on commit.
+   - Rejected commit if validation or linting fails.
+
+4. **Create Build Artifact**:
+   - Packaged the source code and logs into a `.tgz` archive.
+   - Generated a SHA checksum for the build.
+
+5. **Schedule Script Execution**:
+   - Used **cron** (Linux/Mac) or **Task Scheduler** (Windows) to automate script execution.
+
+### Screenshots:
+
+- **Husky Pre-commit Hook Failure**  
+  When the pre-commit hook ran and failed due to the missing `config.json` file, it was logged and rejected:  
+  ![husky pre-commit file ran and failed as there was no config.json file present, same can be verified through the logs](image.png)

@@ -1,5 +1,5 @@
-
-LOG_FILE="validate.log"
+echo "running"
+LOG_FILE="./validate.log"
 TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
 printf "\n" >> "$LOG_FILE"
 if [ -d "src" ]
