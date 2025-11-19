@@ -75,4 +75,42 @@ On day 2 i built a word-stats CLI tool and tested its performance with concurren
    - Tested concurrency levels: **1, 4, 8**  
    - Logged execution time for comparison
 
-  
+## Day 3
+
+On Day 3 i worked with Git, focusing on commits, bisecting, merging, and conflict resolution.
+
+### Tasks
+
+1. **Create a Repository with 8+ Commits**  
+   - Intentionally introduced a bug in commit 4.
+
+2. **Use git bisect**  
+   - Detected the faulty commit using `git bisect`.
+
+3. **Fix the Bug and git revert**  
+   - Fixed the bug and used `git revert` to undo only the buggy commit (not `git reset`).
+
+4. **Use Stash Workflow**  
+   - Ran `git stash`, followed by `git pull` and `git stash apply` to manage local changes.
+
+5. **Merge Conflict Resolution**  
+   - Using two clones of the repo, edited the same line in the same file.
+   - Merged and resolved the conflict, keeping both changes from different branches.
+
+### Screenshots
+
+- **Terminal Logs for Merge Conflicts**  
+  ![terminal logs for merge conflicts](./day3/image-1.png)
+
+- **Screenshot of the Merge Conflict**  
+  ![screenshot of the merge conflict](./day3/image-2.png)
+
+- **Resolving the Conflict**  
+  ![resolving the conflict](./day3/image-3.png)
+
+- **Resolved the Conflict, Keeping Both Changes**  
+  ![resolved the conflict and kept both the changes from different branches](./day3/image-4.png)
+
+- **Graph of Branches After Merging**  
+  ![graph of the branches after merging the demo branch into main branch](./day3/image-5.png)
+
