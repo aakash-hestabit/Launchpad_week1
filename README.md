@@ -199,5 +199,5 @@ On day 4 i focused on network requests, DNS lookups, and building a Node HTTP se
   Again when the linter ran after the validation was complete there was an unused variable so it prevented the commit 
   ![alt text](image-2.png)
 
-
+    Prettier auto-formatted the files before commit.
   ![the prettier formatted all the files added before commiting  ](image-1.png)
